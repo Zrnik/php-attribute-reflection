@@ -1,0 +1,43 @@
+{
+    "name": "zrnik/php-attribute-reflection",
+    "description": "Helper methods wrapping around reflection to get attribute instances easily.",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Štěpán Zrník",
+            "email": "stepan.zrnik@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Zrnik\\AttributeReflection\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Zrnik\\AttributeReflection\\": "tests"
+        },
+        "files": [
+            "tests/Attributes/ExampleFunction.php"
+        ]
+    },
+    "require": {
+        "php": "^8"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "phpstan/phpstan": "^1",
+        "phpunit/phpunit": "^9",
+        "zrnik/phpunit-exceptions": "^0.1"
+    },
+    "config": {
+        "platform": {
+            "php": "8.0"
+        }
+    },
+    "scripts": {
+        "phpstan": "phpstan analyse src tests -l max",
+        "phpunit": "phpunit tests"
+    }
+}
